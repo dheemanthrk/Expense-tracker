@@ -1,11 +1,3 @@
-/*
- * Developed by Radu Nicolae Puspana
- * Copyright Radu Nicolae Puspana
- * Developed in 2017
- * Version 1.0
- */
-
-
 var rpJSframework = (function() {
 
     // get the first occurance of a substring of length 3 in a string

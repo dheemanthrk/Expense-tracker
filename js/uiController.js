@@ -1,14 +1,5 @@
-/*
- * Developed by Radu Nicolae Puspana
- * Copyright Radu Nicolae Puspana
- * Developed in 2017
- * Version 1.0
- */
-
-// UI module manipulates the UI of the app
 var uiController = (function() {
 
-    // private object containing the class names used in index.html and style.css
     var prvDOMstrings = {
         dateLabel: ".budget__title__month__year",
         inputType: ".add__type",
@@ -34,18 +25,11 @@ var uiController = (function() {
     };
 
     return {
-        // public method to retrieve and return all three field values as strings from the UI
         pblGetInput: function() {
 
-            // return an object with all three fields values as strings from the UI
             return {
-                // return "inc" or "exp" from the transaction type list
                 type: document.querySelector(prvDOMstrings.inputType).value,
-
-                // return the transaction description as string
                 description: document.querySelector(prvDOMstrings.inputDescription).value,
-
-                // return the transaction value as a string
                 value: document.querySelector(prvDOMstrings.inputValue).value
             };
         },

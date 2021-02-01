@@ -1,27 +1,9 @@
-/*
- * Developed by Radu Nicolae Puspana
- * Copyright Radu Nicolae Puspana
- * Developed in 2017
- * Version 1.0
- */
-
-
-// App controller for communicating between the budgetController and the UIconroller
 var controller = (function(budgetCtrl, UIctrl) {
-
-    // private function to place the event listeners and the HTML tags' classes
     var prvSetupEventListeners = function(event) {
-
-        // object containing the class names in the index.html and style.css
         var nodeClassAndIdValues = uiController.pblGetDOMstrings();
-
-        // add event listener for the .container div to catch the click event that bubbles up from the
-        // .item__delete__btn <button> tag
         document.querySelector(nodeClassAndIdValues.transactionContainer).addEventListener("click", function(event) {
 
             console.log("s-a dat click pe .container")
-
-            // if the user didn't click on one of the buttons to close the custom popup window for invalid input
             if (event.target.id !== nodeClassAndIdValues.errorPopupOKbutton &&
                 event.target.id !== nodeClassAndIdValues.errorPopupXbutton) {
                 prvDeleteItem(event);
